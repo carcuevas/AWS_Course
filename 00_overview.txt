@@ -1,0 +1,49 @@
+ Services Overview:
+
+	Compute:
+		EC2:
+		ECS: (EC2 Container Service)
+		Elastic Beanstalk:
+		Lambda:
+		Lightsail: VPS service, you don't have to deal with difficult of the Management console of the AWS
+		Batch: for batch processing, not asked in the certification:
+
+	Storage:
+		S3: Simple storage service (SSS), buckets where you upload the files
+		EFS: Elastic FileSyste, Network attached storage
+		Glacier: Data archiver (kind of cheap)
+		Snowball: for large amount of data
+		Storage Gateway: Replicate data from our datacenter and replicate the data back into S3, there are 4 different types
+
+	Database:
+		RDS: Relational Database Service, mysql, MsSQL, Aurora(from Amazon)
+		Dynamo DB: Non relational database service
+		ElastiCache: Way of caching queries from our DB service. so it can be used if we want to access some data many times, without interferring in perfomance with our database
+		Red Shift: Data warehousing, for complicated queries and so
+
+	Migration:
+		AWS Migration Hub: It's a tracking service which allows you to track your applications as you migrate into AWS, and integrated into other sevices.
+		Application Discovery Service: it's a set of tools, detectecs application we have and the dependencies we have in order to run the application.
+		Database Migration Service: it's a very easy way to migrate the DB from own premise to AWS. Basically help to do the migration
+		Snowball: It can be also in Migration section dependeing how you classify,so it's used for migration very large amount of data (TBs)
+
+	Network & Content Delivery: 
+		VPC: Virtual Private Could, it's like a virtual datacenter (you configure network, route table, availability zones and so...). Complex service #@@ Really important for the examination
+		CloudFront: Amazon Content delivery network. If you have different Media assets, images in different regions, when you want to access them, CloudFront can use some edge locations closer to the region where you are requesting the data
+		Route53: Amazon DNS service (working like a phone book) 
+		API Gateway: Way of creating our API to talk to our applications
+		Direct Connect: It's a way to connect with a dedicated line from our  premises to Amazon premises #@@ Also it's important in the examination
+
+	Developer Tools:
+		# && Not single service in the exam
+		CodeStar: project managing with the developers and do some colaboration
+		CodeCommit: a way to store you control, some for example our own git repository, it would be tested and delivery
+		CodePipeline: Continue delivery service
+		X-Ray: To debug and analyze applications, request tracing
+
+	
+		
+		
+
+		
+		
