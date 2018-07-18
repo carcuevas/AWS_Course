@@ -40,6 +40,17 @@
 		CodeCommit: a way to store you control, some for example our own git repository, it would be tested and delivery
 		CodePipeline: Continue delivery service
 		X-Ray: To debug and analyze applications, request tracing
+		
+	Management tools:
+		CloudWatch: Monitoring servers #@@ Really important in the examination
+		CloudFormation: It is a way of Scripting infrastructure #@@ Really important in the examination
+		CloudTrail: everytime you use the console, actually it is calling API and CloudTrail is doing the changes. it can be used for example to track if you have been hacked, so then you can guess who was. #@@ Important in the examination
+		AWS Config: Monitor the configuration of the whole AWS environment, and it can have snapshots and visualize the config later for example.
+		OpsWorks: Very similar to ElasticBeans but it's using Chef and puppets, it's a way to automate the enviroments
+		Service Catalog: A way to mnanage IT services catalog in AWS, everything EC2, images, operating systems.. normally used for big organizations, as goverments. # && not requested in the exam.
+		Systems Manager: An interface to manage all our AWS resources, typically used for example whenever you want to roll out a security patch into thousands of EC2. You can group resources and it can be very helpful if you are sysadmin. # && not requested in the exam.
+		Trusted Advisor: It is giving advices in differents disciplines, as for example in Security (if you have open port which is not needed and so) or for example financially if you are not using some resource that you are paying and so...
+		Managed Services: This one, can help you out if you don't want to admin your ec2 and so. # && not requested in the exam.
 
 	
 		
