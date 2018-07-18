@@ -51,6 +51,38 @@
 		Systems Manager: An interface to manage all our AWS resources, typically used for example whenever you want to roll out a security patch into thousands of EC2. You can group resources and it can be very helpful if you are sysadmin. # && not requested in the exam.
 		Trusted Advisor: It is giving advices in differents disciplines, as for example in Security (if you have open port which is not needed and so) or for example financially if you are not using some resource that you are paying and so...
 		Managed Services: This one, can help you out if you don't want to admin your ec2 and so. # && not requested in the exam.
+		
+	Media Services: (new category) # && None of them will be requested on the AWS certification
+		Elastic Transcoder: Resize and code a video
+		MediaConvert: convert video, and do multicasting
+		MediaLive: Broadcast video services, create HQ video for multiscreen
+		MediaPackage: prepare videos for internet delivery
+		MediaStore: Storage service for media (low latency and so)
+		MediaTailor: Allow to do Target advertising in videostreams without sacrificing quality level
+		
+	Machine Learning: # && not requested in the exam.
+		SageMaker: Deep Learning service for developer. Neuron networks.
+		Amazon Comprehend: It analizing opinions of your products for example
+		DeepLens: Artificial aware cameras, it recognice which is what it is looking at. it can be facial recognision too. Actually it's HW not a service just alone.
+		Lex: it is which is powering the Alexa service, a way to communicate with customer with AI
+		Machine Learning: (Different from Deep learning, so it's not related with neuron network). Throws a dataset to the cloud and analyze this data and giving some results. Machine learning is used for example when we log in Amazon.com and we have the recommended products.
+		Polly: Even if it is not in the exam we will use it, basically turns tex into speech; really human voice with different access.
+		Rekognition: both videos/images, he can recognize which is shown in the video picture, and actually it's  working quite good.
+		Amazon Translate: translation service
+		Amazon Transcribe: Transcribe automatically speech into text.
+		
+	Analytics:
+	
+		Athena: It's a managed service which allows to run SQL into your items in the S3 bouquets, and it's returning your results; for example if you have a bunch of excel spreadsheets you can do some queries using SQL and get the result back. # && not requested in the exam
+		EMR:Elastic Map Reduce,it is processing large amount of data (used in Big Data). it compose of a few servers which are choping the data and then analyzing it  #@@ Included in the examination
+		CloudSearch: doing searchs
+		ElasticSearch: doing searchs
+		Kinesis: A way to ingest big amount of data into AWS (like social media, tweets and so) Related with big data and we'll going into detail later #@@ Really important in the examination
+		Kineseis Video Stream: it is the same like kinesis but related with videos
+		QuickSight: It is very cheap service for business inteligence. # && not requested in the exam.
+		Data Pipeline: A way to move data between different AWS services. 
+		Glue: It used for ETL (extract - transform - load) Convert large amount of data into the desired format for example.
+		
 
 	
 		
