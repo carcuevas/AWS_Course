@@ -82,8 +82,42 @@
 		QuickSight: It is very cheap service for business inteligence. # && not requested in the exam.
 		Data Pipeline: A way to move data between different AWS services. 
 		Glue: It used for ETL (extract - transform - load) Convert large amount of data into the desired format for example.
+	
+	
+	Secure & Identity & Compliance:	
+		IAM: Identity Access Manager #@@ Really important in the examination
+		Cognito: A way of doing temporarly authentication using mobile apps like FB/Linkedin. So it is needed for getting permissions for accessing to AWS resources as DB/S3 and so
+		GuardDuty: Monitors for malicious activity in the AWS account # && not requested in the exam.
+		Inspector: Agent installed in the EC2 where runs a lot of test to see if the server is secure, and give yo a report. #@@ Included in the examination
+		Macie: Scan S3 bucket,it looks for Personal Identificable Information (PII) like name/addresses  and so.
+		Certificate Manager: You get SSL certificate for free (if you are using Route53)
+		CloudHSM: For Hardware Security Module, so you can use Hardware to save your keys. #@@ Included in the exam but high level
+		DirectoryService: A way of integrating your  MS Active Directory + AWS, #@@ Included in the exam but high level
+		WAF: WebApplication Firewall Level 7, stops things like cross-side scripting, SQL injections.. In application level.
+		AWS Shield: You can apply to prevent dDOS attacks for a variety of AWS services like CloudFront, LoadBalancers, Route53. There is also Shield Adavance which is costing much more but it can be even better in mitigating effects of DDOS attacks.
+		AWS Artifact: This is great for audit and compliant, you can access to compliant reports (like PCI reports and so) documentation # && not requested in the exam.
 		
-
+	Mobile Services: # && not requested in the exam.
+		Mobile Hub: management console for mobile, it is connecting your mobile to your AWS backend.# && not requested in the exam.
+		AWS PinPoint:For pushing notifications to mobile. # && not requested in the exam.
+		AWS AppSync: update applications when users reconnect for example. # && not requested in the exam.
+		DeviceFarm: For testing in real devices. # && not requested in the exam.
+		Mobile Analitycs:  # && not requested in the exam.
+		
+	AR/VR: # && not requested in the exam.
+		Sumerian:to create AR/VR or 3D applications, quite cool, still in test.
+		
+	 Application Integration:
+	 	Step Functions: For managing different Lambda functions # && not requested in the exam
+		Amazon MQ: Message queues (like own AWS version of RabbitMQ) # && not requested in the exam
+		SNS: Notification Services (we can do a billing alarm for example) #@@ Included in the examination
+		SQS: Decoupling Infrastructure #@@ Included in the examination
+		SWF: Super WorkFlow service, used for, creating workflows as for example the ones used in Warehouses of Amazon, even you can included man actions, for example when they look for a package to send #@@ Included in the examination
+		
+		
+		
+		
+		
 	
 		
 		
