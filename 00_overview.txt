@@ -112,7 +112,32 @@
 		Amazon MQ: Message queues (like own AWS version of RabbitMQ) # && not requested in the exam
 		SNS: Notification Services (we can do a billing alarm for example) #@@ Included in the examination
 		SQS: Decoupling Infrastructure #@@ Included in the examination
-		SWF: Super WorkFlow service, used for, creating workflows as for example the ones used in Warehouses of Amazon, even you can included man actions, for example when they look for a package to send #@@ Included in the examination
+		SWF: Super WorkFlow service, used for, creating workflows as for example the ones used in Warehouses of Amazon, even you can included man actions, for example when they look for a package to send #@@ Included in the examination.
+		
+	Customer Engagement:
+		AWS Connect:It's a contact center service, like call center in the cloud. # && not requested in the exam.
+		Simple Email Service: Large amount of services cheap, and not worring about it. #@@ Included in the exam but high level
+	
+	Business Productivity:
+		Alexa for Business: It's cool used for example to dial to a meeting room, or to say to IT that a printer is broken, or order ink for a printer. # && not requested in the exam.
+		Chime: It's for VideoConf you can record video and so  # && not requested in the exam.
+		Work Docs: Kind of dropbox for AWS @@ Included in the examination
+		WorkMail: kind of Office 365 but from AWS # && not requested in the exam.
+		
+	Desktop and App Streaming: # && not requested in the exam.
+		WorkSpaces: VDI solution, running an OS insinde the cloud streaming down to your device
+		AppStream 2.0: Streaming concrete applications from the cloud. Like Citrix.
+		
+	IoT:  # && not requested in the exam.
+		iOT Device Management: For managing thousands / millions of iOT devices.
+		Amazon FreeRTOS: OS for the microcontroller, is free ;-)
+		GreenGrass: SW which runs local computing messages data-caching and machine learning devices to  allow you connect devices in a secure way
+		
+	Game Development:
+		GameLift: service to help you develope games in the cloud. # && not requested in the exam.
+		
+		
+		
 		
 		
 		
