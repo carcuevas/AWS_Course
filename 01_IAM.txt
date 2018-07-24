@@ -1,0 +1,44 @@
+What is IAM?
+	Allows you to manage users and their level of access to the AWS console
+
+What does IAM give you?
+	* Centralised control of your AWS account
+	* Shared access to your AWS accoun
+	* Granular Permision
+	* Identity federation (for example connect to FB / Linkedin / MS Access Directory)
+	* Multifactor authetication
+	* Provide Temporarly access to user/devices and services when necessary
+	* Setup/manage our own password rotation policy
+	* Integrates with many other AWS services
+	* Support PCI DSS compliance
+
+Critical Terms: 
+
+	Users: End users (people)
+	Groups: Collection of users under one set of permissions
+	Roles: #** Create roles and assign them to AWS resources
+	Policies: A document which defines one ore more permissions to users/groups/roles
+
+LAB:
+-----
+
+	#** Notice IAM it is global, meaning that when we set up users/groups/roles and policies are the same for any other regions.
+
+	* We normally have some ID consisting in number which is our user, we can change that in IAM. 
+	* root account in AWS console is the one which you log with your email used to sign up with AWS and you will have root priviledges, that's why better use MFA. So give access all services, so better to create new accounts for different users.
+
+	Creating Users:
+		We'll have two ways to log in to AWS, we can do AWS Console Access (the normal throught the webconsole) or the Programmatic Access to which we can access using CLI,API and so (normally used for APP have access to services.
+		#** When creating an user  (with Programmatic Access),we will get an 'Access Key ID' and a'Secret Access key', these credential are using for accessing via to AWS with API or CLI (NOT via AWS CONSOLE!!). When you create these users you got to see just ONCE the info about passwords and keys 
+
+	ROLES: It's a way to grant permissions to entity that you trust
+
+
+
+
+	Setting Billing Alarms: (In reality is from Account Management section)
+	-----------------------
+
+		We'll create an alarm if our account goes into 10USD charges and send a email, in case if we forget to shutdown something. So we go to My Billing Dashboard ->Billing Preferences -> Receiving billing alerts , and go to Manage Billing alert (Cloudwatch)
+
+	
