@@ -1,0 +1,27 @@
+S3
+#@@ It's very hot topic for the exam.
+
+
+Intro:
+------
+
+	S3 stands for, Simple Storage Service (SSS -> S3) It's secure, highly scalable, durable object storage. It is very easy to use, with a Web interface to retrieve or store any amount of DATA.
+
+	* Object Base storage, so you store pictures, videos, documents (but it's not where you storage OS for example)
+	* Chars:
+		Files can be between 0 -> 5 TB
+		Unlimited storage (paying by the gigs)
+		Files are stored in BUCKETS 
+		S3 Names are Universal namespace, meaning that names should be unique GLOBALLY, when generating a bucket a DOMAIN name will be generated, so if domain is taking we won't be able to set up a new bucket with the same name.
+		When successfully uploading a file to S3 you will receive a HTTP CODE 200,
+		
+
+	* Bucket: you can take as a folder in the Cloud you can have folders inside the bucket
+		The bucket name comes in this way:  https://s3-eu-west-1.amazonaws.com/bucket_name -> where we can see this S3, then the region EU-WEST-1, then the amazonaws.com and the last the bucketname #@@ this can be an exam question
+
+DATA CONSISTENCY MODEL ##@@ Popular topic for the exam
+----------------------
+	Read after write consistency for PUTS of new objects (immediatelly after we upload a file is read, so we'll abe to read the content of the file immediatelly)
+	Eventual Consistency for overwrite PUTS and DELETES (can take some time to propagate).We update a file, a file in the S3, so after reading it as Read after write consistency we could get both versions,
+	
+		
