@@ -22,6 +22,77 @@ Intro:
 DATA CONSISTENCY MODEL ##@@ Popular topic for the exam
 ----------------------
 	Read after write consistency for PUTS of new objects (immediatelly after we upload a file is read, so we'll abe to read the content of the file immediatelly)
-	Eventual Consistency for overwrite PUTS and DELETES (can take some time to propagate).We update a file, a file in the S3, so after reading it as Read after write consistency we could get both versions,
+	Eventual Consistency for overwrite PUTS and DELETES (can take some time to propagate).We update a file, a file in the S3, so after reading it as Read after write consistency we could get both versions, the one prior to the changes or the other one, but eventually we'll get the new file but it will take some time to propagate, even more if there are on different availability zones. Meaning that updating/deleting a file, you wont be able to read inmediatelly 
+
+S3 as a simple Key-value store
+------------------------------ 
+	S3 is object base consisting of the following:
+		key (simply the name of the object)
+		Value (data, simple the sequence of bytes)
+		VersionID (important to versioning)
+		Meta-data (data about the data itself, like tags and so)
+		Subresources: 
+			*Access control list: for setting permissions of the files.
+			*Torrent: For torrenting the file #&& not in the exam topic
+
+S3 - Basic Info:
+-----------------
+	99.99 % of availability (Designed for it and Guaranteed)
+	Guarantees also 99.99999999999 (11x9's) DURABILITY (it's warranty that you wont loose more than 100-99.99999999999% files)
+	It is Tiered(escalonado) storage available
+	LifeCycle management (for instance we can move older files from one storage to Glacyer for example)
+	Versioning (we can have versions for a file for example)
+	Encryption (there are different encryptions for the S3)
+	Secure data using Access Control List and bucket policies: We can lock down a bucket using bucket policies at the bucket level, and Access Control is on the invidual file. 
+
+
+S3 Storage Tiers/Classes:
+-------------------------
+	S3 Standard: 
+		Designed for 99.99 % of availability and 99.99999999999% Durability, redundacy across multiple disks in different facilities (availability zones), sustaining the loss of 2 facilities.
+
+	S3 IA:(Infrequently Accessed)
+		For data which is used less frequently, but required fast access when needed (faster than Glacier), it's cheaper than S3 Standard but they charge something for every time you access the data. Again they have redundancy across multiple disks in different availability zones.
+
+	S3 One Zone IA: 
+		Low cost, infrequently Access data, but do it is just in one availability zone.
+
+	Glacier:
+		Cheapest storage, it's for archieving only having 3 modes: Expedidited (to be restored in a few minutes but more $$$), Standard(it will take 3-5 hours to restore) and Bulk(from 5-12 hours to restore). 
+
+
+S3 Charges:
+------------
+
+	Storage: In Gb basis
+	Requests: How many times is the object pulled
+	Storage Management Pricing: You can be charged for the tags,metadata
+	Data Transfer Pricing: For example transferring data from one region to another. (Cross-Region replication)
+	Transfer Acceleration: which enable fast,easy and secure transfers of files over long distances between users and S3 buckets, it's taking advantage of CloudFront and Edge locations.
+
+
+======================
+# @@ EXAM TIPS
+======================
+
+	* S3 is object-based 
+	* Files can be from 0-5TB
+	* Unlimited Storage
+	* Files are stored in buckets
+	* S3 is an universal namespace, so it should be unique globally
+	* Example of a bucket name:  https://s3-region.amazonaws.com/bucketName
+	* Read after Write consistency of PUTS of new Object
+	* Eventual Consistency for overwrite PUTS and DELETES (so it can take some time to propagate)
+	* S3 Storage Classes: S3, S3-IA, One Zone S3-IA, Glacier (data archieving, std retrival time about 3-5 hours)
+	* Core fundamental of the S3 object: Key, Value, VersionID, Metadata, Subresources: ACL(access Control list), Torrent
+	* IT IS NOT SUITABLE FOR ANYTHING ELSE THAN FILES (so no OS, no DB)
+	* When successfully upload a file you will get a message "HTTP 200" 
+
+	* #@@ BEFORE THE EXAM READ THE S3 FAQs ;) 
+ 
+		
+		
+	
+
 	
 		
