@@ -136,16 +136,3 @@
 	Game Development:
 		GameLift: service to help you develope games in the cloud. # && not requested in the exam.
 		
-		
-		
-		
-		
-		
-		
-		
-	
-		
-		
-
-		
-		

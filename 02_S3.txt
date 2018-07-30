@@ -87,12 +87,58 @@ S3 Charges:
 	* Core fundamental of the S3 object: Key, Value, VersionID, Metadata, Subresources: ACL(access Control list), Torrent
 	* IT IS NOT SUITABLE FOR ANYTHING ELSE THAN FILES (so no OS, no DB)
 	* When successfully upload a file you will get a message "HTTP 200" 
+	* When versioning is active you cannot disabled. (just put it innactive)
+	* Versioning is storing all the copies of the object.
+	* Versioning integrates Lifecycle rules
+	* MFA Delete: is used in Versioning to prevent to delet of bucket accidentally 
 
 	* #@@ BEFORE THE EXAM READ THE S3 FAQs ;) 
  
 		
 		
 	
+------------------------------------
+Additional Information from the Labs
+-------------------------------------
+
+
+* By default buckets and the object in the bucket are private.
+* MFA DELETE: We can set up the use of MFA for deleting or modifiying versions on buckets. Which can help to avoid accidentally deletion of S3
+* Encryption:
+	Client side encryption
+	Server side encryption:
+		With Amazon S3 Managed keys(SSE-S3)
+		With KMS (SSE-KMS)
+		With Customer Private keys (SSE-C)
+
+Permissions for objects:
+	Owner Access
+	Access for other AWS accounts: So we can add another AWS account for the permissions of the object(file for instance)
+	Public Access: The rest, meaning the whole inet :D
+
+Properties for Objects:
+	Storage Class: We can change the class of storage for the object as S3 std, S3-IA, one zone S3-IA ...
+	Encryption: Server side encryption
+	Metadata: We can add more metadata
+	Tags: Even if we tag de bucket, #@@ the object are NOT inheriting the Tags from the buckets.
+
+	* The S3 are managed globally (meaning that we see all S3 from all locations at once)
+	
+Permissions for Bucket:
+
+	For the ACL we have:
+		Owner Access
+		Access for other AWS accounts:
+		Public Acess
+		S3 Delivery group: 
+	Policies:
+		We can create policies as we want using Policy Generator :) Just to remember the "Principal" is the one receiving the policy.. but it's a bit out of the scope of the exam
+	
+	CORS Configuration: (In another lecture)
+
+Properties for Bucket:
+	Versioning:  Once enabled, we can only suspend it. So bear in mind that if versioning is enabled, it will keep various versions of files from the original ones once modified, so think on the amount of data which will be needed for big files for example. 
+		* Check https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html
 
 	
-		
+
