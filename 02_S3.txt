@@ -1,4 +1,4 @@
-S3
+S3 (awslagi)
 #@@ It's very hot topic for the exam.
 
 
@@ -91,6 +91,13 @@ S3 Charges:
 	* Versioning is storing all the copies of the object.
 	* Versioning integrates Lifecycle rules
 	* MFA Delete: is used in Versioning to prevent to delet of bucket accidentally 
+	* For activate Replication is needed that both of the S3 have active versions
+	* Regions must be different for the S3 Replication
+	* Existing files prior to a replication are not replicated automatically so you have to copy them
+	* No replication of multiple buckets like daisy chain allowed still
+	* Delete markers are replicated
+	* Deletion of "Delete markers" are NOT replicated, also deleting versions of a file are not replicated either
+	
 
 	* #@@ BEFORE THE EXAM READ THE S3 FAQs ;) 
  
@@ -140,5 +147,12 @@ Properties for Bucket:
 	Versioning:  Once enabled, we can only suspend it. So bear in mind that if versioning is enabled, it will keep various versions of files from the original ones once modified, so think on the amount of data which will be needed for big files for example. 
 		* Check https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html
 
-	
 
+Cross Region Replication:
+		
+	* First for CrossRegion replication to work we need to have Versioning active for both buckets. 
+	* When doing the replication you can do the whole bucket or Prefix (folders)
+	* But when we do the replication, all the files which were existing on the original bucket prior to the replication won't be automatically copied, but we can do it using the AWSCli as for example: ```aws s3 cp --recursive s3://carlinhosbucket s3://carlinhosbucketsydney```
+	* After we have successfully replicated the S3, if we delete one file, so it will delete the file and create the "deletion-mark" in the Origin S3, and also it will also delete the file and create the "deletion-mark"  in the replication. BUT if we delete the "deletion-mark" in the origin S3 this will NOT be replicated into the other S3... S
+	* Also for example if we return to a previous version (delete the current version) of an object in the S3, in the replicated S3 we will NOT get either this change.This is the Replication 
+	* Attention: when we do the replication of a bucket to another is not copiying the existing files but the new/modified ones.
