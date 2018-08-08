@@ -97,6 +97,12 @@ S3 Charges:
 	* No replication of multiple buckets like daisy chain allowed still
 	* Delete markers are replicated
 	* Deletion of "Delete markers" are NOT replicated, also deleting versions of a file are not replicated either
+	* LifeCycle can be used in conjuntion with versioning
+	* LifeCycle can be applied to Current versions and previous versions.
+	* Following actions can be done as part of LifeCycle rules:
+		Transition to Standard S3-IA (default after a minimum of 30days of the creation date)
+		Transition to Glacier after being 30 days in S3-IA by default
+		Also can be used to permanently delete object 
 	
 
 	* #@@ BEFORE THE EXAM READ THE S3 FAQs ;) 
@@ -156,3 +162,16 @@ Cross Region Replication:
 	* After we have successfully replicated the S3, if we delete one file, so it will delete the file and create the "deletion-mark" in the Origin S3, and also it will also delete the file and create the "deletion-mark"  in the replication. BUT if we delete the "deletion-mark" in the origin S3 this will NOT be replicated into the other S3... S
 	* Also for example if we return to a previous version (delete the current version) of an object in the S3, in the replicated S3 we will NOT get either this change.This is the Replication 
 	* Attention: when we do the replication of a bucket to another is not copiying the existing files but the new/modified ones.
+
+
+Lifecycle Management: (S3-IA - Glacier)
+
+ 
+	For example it will good that if we have some objects in S3 which are not accessed in 30 days you can move them to the cheaper S3-IA and if you later do not access after 60 days it can be move to Glacier which is even cheaper, or you can "expire" the object  entyrely after some retention period we configure. This for example can be configured with rules from a service called LifeCycle Management
+
+	* LifeCycle can be used in conjuntion with versioning
+	* LifeCycle can be applied to Current versions and previous versions.
+	* Following actions can be done as part of LifeCycle rules:
+		Transition to Standard S3-IA (default after a minimum of 30days of the creation date)
+		Transition to Glacier after being 30 days in S3-IA by default
+		Also can be used to permanently delete object 
